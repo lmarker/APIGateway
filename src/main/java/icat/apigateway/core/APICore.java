@@ -3,7 +3,6 @@ package icat.apigateway.core;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Iterator;
 
-import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 /**
@@ -74,10 +73,6 @@ public class APICore {
 
 	public String getMethod() {
 	    return method;
-	}
-	
-	public void run() {
-	    
 	}
 
     }

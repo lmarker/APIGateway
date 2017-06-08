@@ -65,15 +65,14 @@ public class APIStore implements ApplicationContextAware {
     }
 
     /**
-     * 
+     * 绑定注释与方法
      * @param method
      * @param targetClassName目标类名称
      */
     private static void APIBinding(Method method,String targetClassName) {
 	APIMapping api = method.getAnnotation(APIMapping.class);
 	//获取参数的类型
-	Parameter[] params = method.getParameters();
-	apimaps.put(api.value(), new MappingNode(method,targetClassName,params));
+	apimaps.put(api.value(), new MappingNode(method,targetClassName,method.getParameters()));
     }
 
     /**
